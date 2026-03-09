@@ -1,0 +1,49 @@
+#+title:      paper-{简短标题}
+#+date:       [{YYYY-MM-DD Day HH:MM}]
+#+filetags:   :read:xray:paper:
+#+identifier: {YYYYMMDDTHHMMSS}
+#+source:     {论文链接}
+#+authors:    {作者}
+
+* 论文说了什么
+
+*问题*: {人话，像在饭桌上跟朋友说}
+*视角*: {方法/切入角度}
+*结果*: {实验证明...。作者推测...（如有）}
+
+*一句话*: {大白话核心总结，像电梯里跟外行朋友说的那句}
+
+#+begin_example
+{餐巾纸图: 核心机制}
+#+end_example
+
+* 对我意味着什么
+
+*可能改变我的*: {一句话，指向具体的思考习惯、决策模式、或认知盲区的改变}
+
+** {碰撞点标题}
+
+#+begin_example
+{ASCII art: 论文洞见 x 我的认知 的碰撞图}
+{布局本身承载含义: 分叉/汇聚/层级/对比}
+#+end_example
+
+{一句金句级别的启发。能脱离论文上下文单独成立}
+
+** {碰撞点标题 2, 如有}
+
+#+begin_example
+{ASCII art}
+#+end_example
+
+{金句}
+
+** {开放问题, 如有}
+
+{论文的推测性 claim 或未回答的锐利问题。做成碰撞卡片——标注"开放问题"，只有方向没有结论。没有则不写此节}
+
+#+begin_example
+{ASCII art: 开放问题的碰撞图}
+#+end_example
+
+{一个尖锐的问题。值得追就追得下去，不值得追一眼就知道}

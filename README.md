@@ -17,6 +17,9 @@ A personal collection of Agent Skills. Each folder is one skill — read its `SK
 | [get_web_content](./get_web_content/SKILL.md) | Fetch and extract web page content |
 | [ruby_on_rails_develop](./ruby_on_rails_develop/SKILL.md) | Ruby on Rails development conventions and patterns |
 | [ljg-skill-xray-paper](./ljg-skill-xray-paper/SKILL.md) | Analyze and summarize X-ray related research papers |
+| [academic-researcher](./academic-researcher/SKILL.md) | Academic research assistant for literature reviews, paper analysis, and scholarly writing |
+| [paper-2-web](./paper-2-web/SKILL.md) | Convert papers into promotional formats (Paper2Web, Paper2Video, Paper2Poster) |
+| [read-arxiv-paper](./read-arxiv-paper/SKILL.md) | Read arxiv papers given an arxiv URL |
 
 ## Prompts
 
