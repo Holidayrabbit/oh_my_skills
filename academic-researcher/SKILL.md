@@ -1,10 +1,8 @@
 ---
 name: academic-researcher
 description: |
-  Academic research assistant for literature reviews, paper analysis, and scholarly writing.
-  Use when: reviewing academic papers, conducting literature reviews, writing research summaries,
-  analyzing methodologies, formatting citations, or when user mentions academic research, scholarly
-  writing, papers, or scientific literature.
+  学术研究入口：文献综述、论文分析、学术写作等。涉及 arxiv 论文获取时，调用 arxiv-paper-reader skill。
+  Use when: 文献综述、论文总结、方法论分析、引用格式、研究提案，或用户提及学术研究、论文、科学文献。
 license: MIT
 metadata:
   author: awesome-llm-apps
@@ -13,18 +11,25 @@ metadata:
 
 # Academic Researcher
 
-You are an academic research assistant with expertise across disciplines for literature reviews, paper analysis, and scholarly writing.
+学术研究助手，作为多种学术任务的统一入口。
 
-## When to Apply
+## 使用场景
 
-Use this skill when:
-- Conducting literature reviews
-- Summarizing research papers  
-- Analyzing research methodologies
-- Structuring academic arguments
-- Formatting citations (APA, MLA, Chicago, etc.)
-- Identifying research gaps
-- Writing research proposals
+- 文献综述
+- 论文总结与分析
+- 研究方法论分析
+- 学术论证与结构
+- 引用格式（APA、MLA、Chicago 等）
+- 研究空白识别
+- 研究提案撰写
+
+## ArXiv 论文获取
+
+当用户提供 arxiv URL（如 `arxiv.org/abs/2401.12345`）、论文 ID，或要求读取、解释、总结某篇 arxiv 论文时：
+
+**应调用 `arxiv-paper-reader` skill**（`.agents/skills/arxiv-paper-reader/SKILL.md`）
+
+该 skill 负责：从 AlphaXiv 获取结构化概览、必要时阅读 TeX 源码、生成总结报告。
 
 ## Paper Analysis Framework
 
@@ -178,92 +183,3 @@ For paper summaries:
 ## Personal Notes
 [Optional: Connections to other work, questions, critiques]
 ```
-
-## Example
-
-**User Request:** "Summarize research on spaced repetition for learning"
-
-**Response:**
-
-## Literature Summary: Spaced Repetition in Learning
-
-### Overview
-Spaced repetition is a learning technique where review sessions are distributed over increasing time intervals. Extensive research demonstrates its superiority to massed practice (cramming) for long-term retention across diverse materials and populations.
-
-### Foundational Research
-
-**Ebbinghaus (1885)** - Original discovery
-- Pioneering work on memory and forgetting curves
-- Demonstrated exponential decay of memory over time
-- Showed spacing effect in nonsense syllable learning
-- Laid foundation for modern spacing research
-
-**Cepeda et al. (2006)** - Meta-analysis
-- Analyzed 254 studies on the spacing effect
-- Found robust effects across materials, ages, and retention intervals
-- Optimal gap: approximately 10-20% of desired retention interval
-- Effect size: d = 0.42 (moderate to large)
-
-*Citation:* Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin, 132*(3), 354-380. https://doi.org/10.1037/0033-2909.132.3.354
-
-### Mechanisms
-
-**Karpicke & Roediger (2008)** - Retrieval practice
-- Compared spaced retrieval vs. repeated study
-- Spaced testing: 80% retention after 1 week
-- Repeated study: 36% retention after 1 week  
-- Highlighted importance of active retrieval over passive review
-
-**Three proposed mechanisms:**
-
-1. **Encoding Variability Hypothesis** - Different contexts during spaced sessions create multiple retrieval paths
-2. **Study-Phase Retrieval** - Spacing intervals force retrieval at optimal difficulty
-3. **Consolidation** - Time between sessions allows memory consolidation processes
-
-### Practical Applications
-
-**Effective implementations:**
-- **Flashcard systems**: Anki, SuperMemo (algorithm-based scheduling)
-- **Language learning**: Duolingo, Memrise (adaptive spacing)
-- **Medical education**: Spaced questions in board exam prep
-- **Certification training**: Professional licensure programs
-
-**Optimal scheduling:**
-- Initial review: 1-2 days after learning
-- Subsequent reviews: Increasing intervals (3 days, 1 week, 2 weeks, 1 month)
-- Adjust based on retrieval difficulty
-
-### Limitations and Caveats
-
-1. **Requires planning and commitment** - Can't cram night before exam
-2. **Individual differences** - Optimal spacing varies by person, material
-3. **Type of learning** - More effective for declarative than procedural knowledge
-4. **Initial learning** - Still need effective initial encoding
-5. **Motivation** - Long-term commitment needed for maximum benefit
-
-### Research Gaps
-
-- Optimal spacing for different content types
-- Individual adaptive algorithms
-- Integration with other learning techniques
-- Long-term studies (years rather than weeks)
-- Neural mechanisms underlying spacing effect
-
-### Recommendations for Practice
-
-Based on current evidence:
-1. Start reviewing within 24-48 hours of initial learning
-2. Use active retrieval (testing) not passive review
-3. Gradually increase intervals between reviews
-4. Adjust difficulty - items should be challenging but retrievable
-5. Combine with other effective techniques (elaboration, interleaving)
-
-### Key References
-
-*Note: Full citations in APA format*
-
-Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin, 132*(3), 354-380.
-
-Karpicke, J. D., & Roediger, H. L. (2008). The critical importance of retrieval for learning. *Science, 319*(5865), 966-968.
-
-Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). Improving students' learning with effective learning techniques. *Psychological Science in the Public Interest, 14*(1), 4-58.
